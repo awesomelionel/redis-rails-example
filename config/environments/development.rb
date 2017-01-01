@@ -40,12 +40,11 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   #
-  # config.cache_store = :redis_store, {
-  #   host: Rails.application.secrets.redis_server,
-  #   port: Rails.application.secrets.redis_port,
-  #   db: Rails.application.secrets.redis_cache_database,
-  #   namespace: Rails.application.secrets.redis_cache_namespace
-  # }
+  config.cache_store = :redis_store, {
+    host: Rails.application.secrets.redis_server,
+    port: Rails.application.secrets.redis_port,
+    db: Rails.application.secrets.redis_cache_database,
+    namespace: Rails.application.secrets.redis_cache_namespace
+  }
 
-  config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 90.minutes }
 end
