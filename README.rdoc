@@ -1,28 +1,13 @@
-== README
+# Redis on Rails example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example rails application using redis as a cache based on [this tutorial](https://www.driftingruby.com/episodes/redis-basics)
 
-Things you may want to cover:
+## How to run
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Ensure that redis is installed and running. I used `brew install redis` on MacOS
+2. Run `rails server` to start the server
+3. Run `redis-cli monitor` to start monitoring redis
+4. Navigate to [localhost:3000](http://localhost:3000) and hit refresh to see redis in action.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
